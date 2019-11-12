@@ -1,7 +1,10 @@
-const main = () => {
-  if (document.querySelector('h1.hello-world')) {
-    document.querySelector('h1.hello-world').textContent = 'Hello, World!'
-  }
-}
+const qs = e => document.querySelector(e);
 
-document.addEventListener('DOMContentLoaded', main)
+const changeColor = () => {
+  const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  console.log(color);
+  qs(".colorCode").textContent = color;
+  document.body.style.background = color;
+};
+
+qs(".colorClicker").addEventListener("click", changeColor);
