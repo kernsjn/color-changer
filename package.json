@@ -6,6 +6,12 @@
     "deploy": "echo 'To setup deployment run: yarn setup-deploy'",
     "setup-deploy": "app-app --deploy && yarn deploy"
   },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "useTabs": false
+  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "eslint": "^6.6.0",

@@ -1,10 +1,15 @@
-const qs = e => document.querySelector(e);
+const qs = e => document.querySelector(e)
 
-const changeColor = () => {
-  const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  console.log(color);
-  qs(".colorCode").textContent = color;
-  document.body.style.background = color;
-};
+const randomColor = () => {
+  let x = Math.floor(Math.random() * 256)
+  let y = Math.floor(Math.random() * 256)
+  let z = Math.floor(Math.random() * 256)
+  let bgColor = 'rgb(' + x + ',' + y + ',' + z + ')'
+  console.log(bgColor)
 
-qs(".colorClicker").addEventListener("click", changeColor);
+  qs('.colorCode').textContent = bgColor
+  document.body.style.background = bgColor
+}
+randomColor()
+
+qs('.colorClicker').addEventListener('click', randomColor)
